@@ -1,0 +1,50 @@
+name: Create Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "Binaries/**"
+      - "Content/**"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine next version
+        id: version
+        run: |
+          latest_tag=$(git tag -l "v[0-9]*" | sort -V | tail -n 1)
+          if [ -z "$latest_tag" ]; then
+            next_number=1
+          else
+            next_number=$(( ${latest_tag#v} + 1 ))
+          fi
+          next_tag="v${next_number}"
+          echo "tag=${next_tag}" >> "$GITHUB_OUTPUT"
+
+      - name: Package modpack
+        run: |
+          zip -r "icarus-beu-modpack-${{ steps.version.outputs.tag }}.zip" Binaries Content README.md
+
+      - name: Create tag
+        run: |
+          git tag "${{ steps.version.outputs.tag }}"
+          git push origin "${{ steps.version.outputs.tag }}"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: ${{ steps.version.outputs.tag }}
+          files: icarus-beu-modpack-${{ steps.version.outputs.tag }}.zip
+          generate_release_notes: true
