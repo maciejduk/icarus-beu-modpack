@@ -4,18 +4,20 @@
 
 ## Installation
 
-1. Open Steam.
-2. Go to **Library**.
-3. Right-click **Icarus**, then select **Manage -> Browse Local Files**. This opens the game's installation folder in File Explorer.
-4. Inside that folder, navigate to the `Icarus` subfolder (the folder that already contains `Binaries` and `Content`).
-5. Copy the `Binaries` and `Content` folders from this modpack into that `Icarus` folder, **merging and overwriting** existing files when prompted.
+1. Make sure Icarus is fully closed.
+2. Download or clone this modpack.
+3. Run `installmods.bat` from the modpack folder.
+4. Wait until the script prints `Mods installed`.
+5. Press any key to close the installer.
 6. Launch the game as usual through Steam.
 
 ## Notes
 
-- Back up your original `Binaries` and `Content` folders before overwriting them, in case you want to restore the vanilla game later.
+- The installer automatically finds the Icarus installation path from Steam.
+- The installer wipes the game's existing `Icarus\Content\Paks\mods` folder before copying this modpack's files into it.
+- The installer removes UE4SS from `Icarus\Binaries\Win64`, including the `ue4ss` folder and `dwmapi.dll`, because UE4SS can cause problems with the game.
 - If Steam updates the game, it may reset these folders to their default (unmodded) state, so you may need to reinstall this modpack after game updates.
-- Make sure Icarus is fully closed before copying files.
+- If the installer cannot find Icarus automatically, open Steam, go to **Library**, right-click **Icarus**, and choose **Manage -> Browse Local Files** to confirm the game is installed.
 
 ---
 
@@ -23,15 +25,17 @@
 
 ## Instalacja
 
-1. Otwórz Steam.
-2. Przejdź do zakładki **Biblioteka**.
-3. Kliknij prawym przyciskiem myszy na **Icarus**, a następnie wybierz **Zarządzaj -> Przeglądaj pliki lokalne**. Otworzy się folder instalacyjny gry w Eksploratorze plików.
-4. W tym folderze przejdź do podfolderu `Icarus` (folderu, który zawiera już `Binaries` i `Content`).
-5. Skopiuj foldery `Binaries` oraz `Content` z tej paczki modów do folderu `Icarus`, wybierając opcję **scal i zastąp** przy pojawiających się plikach.
+1. Upewnij się, że Icarus jest całkowicie zamknięty.
+2. Pobierz albo sklonuj tę paczkę modów.
+3. Uruchom `installmods.bat` z folderu paczki modów.
+4. Poczekaj, aż skrypt wyświetli `Mods installed`.
+5. Naciśnij dowolny klawisz, aby zamknąć instalator.
 6. Uruchom grę normalnie przez Steam.
 
 ## Uwagi
 
-- Przed nadpisaniem zrób kopię zapasową oryginalnych folderów `Binaries` i `Content`, na wypadek gdybyś chciał przywrócić grę bez modów.
+- Instalator automatycznie znajduje ścieżkę instalacji Icarusa przez Steam.
+- Instalator czyści istniejący folder `Icarus\Content\Paks\mods` w grze, a następnie kopiuje do niego pliki z tej paczki.
+- Instalator usuwa UE4SS z `Icarus\Binaries\Win64`, w tym folder `ue4ss` oraz plik `dwmapi.dll`, ponieważ UE4SS może powodować problemy z grą.
 - Aktualizacja gry przez Steam może przywrócić te foldery do wersji domyślnej (bez modów), więc po każdej aktualizacji może być konieczna ponowna instalacja tej paczki.
-- Upewnij się, że Icarus jest całkowicie zamknięty przed kopiowaniem plików.
+- Jeśli instalator nie znajdzie Icarusa automatycznie, otwórz Steam, przejdź do **Biblioteki**, kliknij prawym przyciskiem myszy **Icarus** i wybierz **Zarządzaj -> Przeglądaj pliki lokalne**, aby potwierdzić, że gra jest zainstalowana.
