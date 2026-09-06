@@ -7,6 +7,8 @@ on:
     paths:
       - "Binaries/**"
       - "Content/**"
+      - "installmods.bat"
+      - "README.md"
 
 permissions:
   contents: write
@@ -34,7 +36,7 @@ jobs:
 
       - name: Package modpack
         run: |
-          zip -r "icarus-beu-modpack-${{ steps.version.outputs.tag }}.zip" Binaries Content README.md
+          zip -r "icarus-beu-modpack-${{ steps.version.outputs.tag }}.zip" Binaries Content installmods.bat README.md
 
       - name: Create tag
         run: |

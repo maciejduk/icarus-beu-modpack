@@ -1,5 +1,7 @@
 [![Create Release](https://github.com/maciejduk/icarus-beu-modpack/actions/workflows/release.yml/badge.svg)](https://github.com/maciejduk/icarus-beu-modpack/actions/workflows/release.yml)
 
+[Changelog](CHANGELOG.md)
+
 # English
 
 ## Installation
