@@ -7,7 +7,7 @@
 ## Installation
 
 1. Make sure Icarus is fully closed.
-2. Download or clone this modpack.
+2. Download or clone this modpack (Look for a package under `Releases` section on the right)
 3. Run `installmods.bat` from the modpack folder.
 4. Wait until the script prints `Mods installed`.
 5. Press any key to close the installer.
@@ -28,7 +28,7 @@
 ## Instalacja
 
 1. Upewnij się, że Icarus jest całkowicie zamknięty.
-2. Pobierz albo sklonuj tę paczkę modów.
+2. Pobierz albo sklonuj tę paczkę modów. (Szukaj paczki pod sekcją `Releases` po prawej)
 3. Uruchom `installmods.bat` z folderu paczki modów.
 4. Poczekaj, aż skrypt wyświetli `Mods installed`.
 5. Naciśnij dowolny klawisz, aby zamknąć instalator.
